@@ -46,7 +46,12 @@ else{
 }
 
 }
-  return decodedArr;
+let ans = "";
+ ans = decodedArr.toString();
+
+let regex = /,/gi;
+let result = ans.replace(regex,"").trim()
+  return result;
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
@@ -55,3 +60,4 @@ else{
 
 // Do not change this line
 window.rot13 = rot13;
+

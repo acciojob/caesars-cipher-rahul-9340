@@ -38,20 +38,17 @@ for(let i=0; i<encodedStr.length; i++)
 {
   if(encodedStr.charAt(i)>="A" && encodedStr.charAt(i)<="Z")
   {
-  let char = encodedStr.charAt(i);
-  decodedArr[i] = lookup[char];
+  let char =lookup[encodedStr[i]];
+	  decodedArr.push(char)
   }
 else{
-  decodedArr[i] = encodedStr.charAt(i);
+ let char = encodedStr[i];
+	  decodedArr.push(char)
 }
 
 }
-let ans = "";
- ans = decodedArr.toString();
-
-let regex = /,/gi;
-let result = ans.replace(regex,"")
-  return result;
+let ans = decodedArr.join("")
+  return ans;
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line

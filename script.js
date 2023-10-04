@@ -50,7 +50,7 @@ let ans = "";
  ans = decodedArr.toString();
 
 let regex = /,/gi;
-let result = ans.replace(regex,"").trim()
+let result = ans.replace(regex,"")
   return result;
 }
 
